@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Career — Studio Portfolio</title>
+
+  <!-- Free typography base. Swap to your licensed grotesk if you have one. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Inter+Tight:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/styles.css" />
+
+</head>
+<body>
+
+  <!-- Custom cursor (desktop only) -->
+  <div class="cursor" aria-hidden="true">
+    <div class="cursor__dot"></div>
+    <div class="cursor__ring"></div>
+    <div class="cursor__label">VIEW</div>
+  </div>
+
+  <header class="top">
+    <a class="brand" href="index.html" data-cursor="HOME">FIND―JAESEO</a>
+
+    <div class="top__right">
+      <a class="toplink" href="resume.html" data-cursor="AGCY">Resume</a>
+      <button class="menuBtn" type="button" aria-expanded="false" aria-controls="menu" data-cursor="MENU">
+        <span class="menuBtn__text">Menu</span>
+        <span class="menuBtn__icon" aria-hidden="true"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Overlay menu -->
+  <aside id="menu" class="menu" aria-hidden="true">
+    <div class="menu__bg" aria-hidden="true"></div>
+
+    <div class="menu__inner">
+      <div class="menu__top">
+        <div class="menu__marquee" aria-hidden="true">
+          <div class="menu__marqueeTrack">
+            <span>YOOK JAESEO</span><span>YOOK JAESEO</span><span>YOOK JAESEO</span><span>YOOK JAESEO</span>
+            <span>YOOK JAESEO</span><span>YOOK JAESEO</span><span>YOOK JAESEO</span><span>YOOK JAESEO</span>
+          </div>
+        </div>
+
+        <nav class="menu__nav" aria-label="Primary">
+          <a href="index.html#work" data-cursor="WORK">Home</a>
+          <a href="career.html" data-cursor="AGCY">Career</a>
+          <a href="hobby.html" data-cursor="ORIG">Hobby</a>
+          <a href="resume.html" data-cursor="VIEW">Resume</a>
+        </nav>
+
+        <div class="menu__meta">
+          <div>
+            <div class="kicker">Contact</div>
+            <a class="metaLink" href="mailto:jari26@kakao.com" data-cursor="EMAIL">jari26@kakao.com</a>
+          </div>
+          <div>
+            <div class="kicker">Social</div>
+            <div class="metaRow">
+              <a class="metaLink" href="https://www.instagram.com/jarigemi" data-cursor="IG">Instagram</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button class="menu__close" type="button" data-cursor="CLOSE" aria-label="Close menu">Close</button>
+    </div>
+  </aside>
+
+
+  <main class="wrap">
+    <section class="pageHero">
+      <div class="pageHero__grid">
+        <h1 class="h1 reveal">Career</h1>
+        <p class="lead reveal">Client work, campaigns, and commissioned production.</p>
+      </div>
+    </section>
+
+    <section class="list">
+      <div class="list__head">
+        <h2 class="h2 reveal">Projects</h2>
+        <p class="sub reveal">Browse photo items, or go to the detailed career template.</p>
+      </div>
+
+      <div class="rows">
+        <a class="row reveal" href="career1.html" data-cursor="VIEW">
+          <span class="row__left">Brand Launch Film</span>
+          <span class="row__right">Photo / 2026</span>
+        </a>
+
+        <a class="row reveal" href="career2.html" data-cursor="VIEW">
+          <span class="row__left">Editorial Campaign</span>
+          <span class="row__right">Photo / 2026</span>
+        </a>
+
+        <a class="row reveal" href="career3.html" data-cursor="VIEW">
+          <span class="row__left">Career Detail Template</span>
+          <span class="row__right">Case study</span>
+        </a>
+
+        <a class="row reveal" href="career4.html" data-cursor="VIEW">
+          <span class="row__left">Product Film</span>
+          <span class="row__right">Photo / 2026</span>
+        </a>
+      </div>
+    </section>
+
+    <footer class="footer footer--tight">
+      <div class="footer__row">
+        <a href="hobby.html" class="footer__big" data-cursor="ORIG">Browse Hobby →</a>
+      </div>
+      <div class="footer__row footer__small">
+        <span> </span><span class="accent">Open for 2026</span>
+      </div>
+    </footer>
+  </main>
+
+  <script src="js/main.js" defer></script>
+
+</body>
+</html>

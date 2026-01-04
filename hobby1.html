@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Hobby 1 — Studio Portfolio</title>
+
+  <!-- Free typography base. Swap to your licensed grotesk if you have one. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Inter+Tight:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/styles.css" />
+
+</head>
+<body>
+
+  <!-- Custom cursor (desktop only) -->
+  <div class="cursor" aria-hidden="true">
+    <div class="cursor__dot"></div>
+    <div class="cursor__ring"></div>
+    <div class="cursor__label">VIEW</div>
+  </div>
+
+  <header class="top">
+    <a class="brand" href="index.html" data-cursor="HOME">FIND―JAESEO</a>
+
+    <div class="top__right">
+      <button class="menuBtn" type="button" aria-expanded="false" aria-controls="menu" data-cursor="MENU">
+        <span class="menuBtn__text">Menu</span>
+        <span class="menuBtn__icon" aria-hidden="true"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Overlay menu -->
+  <aside id="menu" class="menu" aria-hidden="true">
+    <div class="menu__bg" aria-hidden="true"></div>
+
+    <div class="menu__inner">
+      <div class="menu__top">
+        <div class="menu__marquee" aria-hidden="true">
+          <div class="menu__marqueeTrack">
+            <span>YOOK JAESEO</span><span>YOOK JAESEO</span><span>YOOK JAESEO</span><span>YOOK JAESEO</span>
+            <span>YOOK JAESEO</span><span>YOOK JAESEO</span><span>YOOK JAESEO</span><span>YOOK JAESEO</span>
+          </div>
+        </div>
+
+        <nav class="menu__nav" aria-label="Primary">
+          <a href="index.html#work" data-cursor="WORK">Home</a>
+          <a href="career.html" data-cursor="AGCY">Career</a>
+          <a href="hobby.html" data-cursor="ORIG">Hobby</a>
+          <a href="resume.html" data-cursor="VIEW">Resume</a>
+        </nav>
+
+        <div class="menu__meta">
+          <div>
+            <div class="kicker">Contact</div>
+            <a class="metaLink" href="mailto:jari26@kakao.com" data-cursor="EMAIL">jari26@kakao.com</a>
+          </div>
+          <div>
+            <div class="kicker">Social</div>
+            <div class="metaRow">
+              <a class="metaLink" href="https://www.instagram.com/jarigemi" data-cursor="IG">Instagram</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button class="menu__close" type="button" data-cursor="CLOSE" aria-label="Close menu">Close</button>
+    </div>
+  </aside>
+
+
+  <main class="wrap">
+    <section class="caseHero">
+      <div class="caseHero__top">
+        <div class="caseMeta reveal">
+          <div class="kicker">Case Study</div>
+          <div class="caseTitle">Social Project — Impact Campaign</div>
+        </div>
+
+        <div class="caseAside reveal">
+          <div class="caseStat">
+            <div class="caseStat__k">Role</div>
+            <div class="caseStat__v">Social Project Manager</div>
+          </div>
+          <div class="caseStat">
+            <div class="caseStat__k">Year</div>
+            <div class="caseStat__v">2026</div>
+          </div>
+          <div class="caseStat">
+            <div class="caseStat__k">Category</div>
+            <div class="caseStat__v accent">Hobby</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="casePoster reveal casePoster--image" aria-label="Career hero photo">
+        <img src="assets/slide1.jpg" alt="Career hero photo" loading="eager" />
+      </div>
+    </section>
+
+    <section class="caseBody">
+      <div class="caseGrid">
+        <div class="caseCol reveal">
+          <h2 class="h2">Overview</h2>
+          <p class="p">
+            This page is a single “project detail” template: editorial pacing, strong typographic hierarchy,
+            and clear line-based structure. Replace copy, stills, and video with your case study content.
+          </p>
+          <p class="p">
+            Use short paragraphs. Aim for high signal. Keep supporting info in the right column or in caption rows.
+          </p>
+        </div>
+
+        <div class="caseCol reveal">
+          <h2 class="h2">Credits</h2>
+          <div class="credits">
+            <div class="credit"><span>Director</span><span>You</span></div>
+            <div class="credit"><span>DP</span><span>Collaborator</span></div>
+            <div class="credit"><span>Editor</span><span>Collaborator</span></div>
+            <div class="credit"><span>Music</span><span>Artist</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="stills">
+        <figure class="still reveal" data-cursor="VIEW">
+          <img src="assets/slide1.jpg" alt="Still image 1">
+          <figcaption>Still caption / context.</figcaption>
+        </figure>
+        <figure class="still reveal" data-cursor="VIEW">
+          <img src="assets/slide2.jpg" alt="Still image 2">
+          <figcaption>Still caption / context.</figcaption>
+        </figure>
+      </div>
+
+      <div class="next">
+        <a class="cta" href="hobby.html" data-cursor="AGCY">Back to Hobby</a>
+        <a class="cta cta--ghost" href="career.html" data-cursor="ORIG">Back to Career</a>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer__row">
+        <a href="mailto:jari26@kakao.com" class="footer__big" data-cursor="EMAIL">jari26@kakao.com</a>
+      </div>
+      <div class="footer__row footer__small">
+      <span>Seoul, South Korea</span><span>©2026 YOOK JAESEO</span>
+      </div>
+    </footer>
+  </main>
+
+  <script src="js/main.js" defer></script>
+
+</body>
+</html>
