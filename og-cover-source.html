@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box}
+  html,body{margin:0}
+  body{width:1200px;height:630px;overflow:hidden;
+    font-family:'Plus Jakarta Sans',system-ui,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+  .card{position:relative;width:1200px;height:630px;overflow:hidden;color:#fff;
+    background:radial-gradient(115% 88% at 50% 47%,#b3c7fa 0%,#7593ef 24%,#2e56de 52%,#1735ba 78%,#0b1f7a 100%)}
+  canvas{position:absolute;inset:0;width:100%;height:100%}
+  .wordmark{position:absolute;z-index:5;left:52px;top:42px;
+    font-weight:800;font-size:26px;letter-spacing:-.035em}
+  .copy{position:absolute;z-index:3;left:0;right:0;top:74px;text-align:center;
+    font-weight:500;font-size:26px;line-height:1.42;letter-spacing:-.02em;
+    text-shadow:0 2px 18px rgba(12,28,90,.35)}
+  .copy p{margin:0}
+  .name{position:absolute;z-index:4;left:50%;top:55%;transform:translate(-50%,-50%);
+    font-weight:800;font-size:150px;line-height:.82;letter-spacing:-.055em;white-space:nowrap;
+    text-shadow:0 3px 14px rgba(5,14,54,.45),0 16px 54px rgba(5,14,54,.45)}
+  .foot{position:absolute;z-index:6;left:0;right:0;bottom:46px;
+    display:flex;justify-content:center;gap:12px}
+  .chip{border:1px solid rgba(255,255,255,.42);background:rgba(255,255,255,.15);
+    border-radius:999px;padding:13px 26px;font-weight:600;font-size:20px;letter-spacing:-.02em}
+</style>
+</head>
+<body>
+  <div class="card">
+    <canvas id="c"></canvas>
+    <div class="wordmark">Jaeseo Yook</div>
+    <div class="copy">
+      <p>I&rsquo;m a junior business developer</p>
+      <p>with a strong interest in the social sector.</p>
+    </div>
+    <div class="name">Jaeseo Yook</div>
+    <div class="foot">
+      <span class="chip">Business Development</span>
+      <span class="chip">Social Impact</span>
+      <span class="chip">AI Data Center</span>
+    </div>
+  </div>
+<script>
+// Same voxel-heart field as the site hero, rendered once as a still frame.
+const canvas=document.getElementById('c'),ctx=canvas.getContext('2d');
+const cw=1200,ch=630,dpr=2;
+canvas.width=cw*dpr;canvas.height=ch*dpr;ctx.setTransform(dpr,0,0,dpr,0,0);
+const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
+function insideHeart(x,y){const a=x*x+y*y-1;return a*a*a-x*x*y*y*y}
+const cx=cw*.5,cy=ch*.615,scale=Math.min(ch*.285,cw*.165);
+const target=Math.round(clamp(cw*ch/250,2400,5600));
+const parts=[];let tries=0;
+while(parts.length<target&&tries<target*16){
+  tries++;
+  const x=Math.random()*3-1.5,y=Math.random()*3-1.5,f=insideHeart(x,y);
+  if(f>0)continue;
+  const depth=Math.min(1,Math.pow(-f,.30));
+  if(Math.random()>.56+.44*depth)continue;
+  const jx=(1-depth)*(Math.random()-.5)*.26,jy=(1-depth)*(Math.random()-.5)*.26;
+  parts.push({x:cx+(x+jx)*scale,y:cy-(y+jy)*scale,size:3.5+Math.random()*(3+7.5*depth)});
+}
+const amb=Math.round(clamp(cw*ch/5200,180,420));
+for(let i=0;i<amb;i++)parts.push({x:Math.random()*cw,y:Math.random()*ch,size:2.5+Math.random()*8});
+ctx.fillStyle='#07090c';
+for(const p of parts)ctx.fillRect(Math.round(p.x),Math.round(p.y),Math.round(Math.max(2,p.size)),Math.round(Math.max(2,p.size)));
+document.body.dataset.ready='1';
+</script>
+</body>
+</html>
