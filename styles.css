@@ -184,15 +184,13 @@ button{font:inherit}a{color:inherit}
 .meta-grid strong{font:600 15px/1.4 var(--ui)}
 .modal-section{margin-top:26px}
 .modal-section p{margin:0;font:400 16px/1.65 var(--ui);max-width:62ch;color:rgba(16,16,20,.82)}
-.results{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px}
+.results{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
 .result{position:relative;border:1px solid var(--line);border-radius:18px;padding:18px;background:#fff}
 .result strong{display:block;font-weight:800;font-size:clamp(22px,2.2vw,30px);letter-spacing:-.03em}
 .result span{display:block;margin-top:8px;font:600 12px/1.35 var(--ui);color:rgba(16,16,20,.55)}
-.result em{position:absolute;right:14px;bottom:14px;font-style:normal;font-size:13px}
-.result-0{background:var(--blue-soft)}.result-0 strong,.result-0 em{color:var(--blue)}
-.result-1{background:#f4f4f6}.result-1 strong,.result-1 em{color:var(--ink)}
-.result-2{background:#ffeef4}.result-2 strong,.result-2 em{color:#e0447c}
-.result-3{background:#fff6de}.result-3 strong,.result-3 em{color:#96700f}
+.result-0{background:var(--blue-soft)}.result-0 strong{color:var(--blue)}
+.result-1{background:#f4f4f6}.result-1 strong{color:var(--ink)}
+.result-2{background:#ffeef4}.result-2 strong{color:#e0447c}
 
 /* responsive -------------------------------------------------------------- */
 @media(max-width:1080px){
@@ -205,14 +203,16 @@ button{font:inherit}a{color:inherit}
   .modal-photo{min-height:300px}
 }
 @media(max-width:680px){
-  .hero{min-height:640px;padding:12px}
-  .hero-copy{font-size:15px;margin-top:6vh}
+  .hero{min-height:600px;padding:12px}
+  .hero-copy{font-size:15px;margin-top:5vh}
   .hero-name{font-size:clamp(38px,13.5vw,84px)}
   .wordmark{font-size:16px}
   .hero-tools .link{display:none}
-  .dock{grid-template-columns:1fr 1fr;left:12px;right:12px;bottom:66px;gap:8px}
+  .dock{grid-template-columns:1fr 1fr;left:12px;right:12px;bottom:86px;gap:8px}
   .dock a{font-size:14px;padding:12px 12px 12px 16px}
   .dock a span{width:22px;height:22px;font-size:10px}
+  .scroll-cue{bottom:18px;gap:6px;font-size:11px;opacity:.8}
+  .mouse{width:19px;height:28px}
   .story-block{min-height:86svh;padding:24px 16px}
   .about-copy{max-width:100%}
   .about-copy h2{font-size:clamp(40px,11vw,64px)}
